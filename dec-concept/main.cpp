@@ -99,17 +99,9 @@ int main(int argc, char **argv)
 	// Now we prepare some data and send some message.
 	
 	// 	Example event parameters structure
-	event stSampleEvent;
-	stSampleEvent.eventId = SAMPLE_MESSAGE_ID;
-	stSampleEvent.sampleData = 1234;
-		
-	event stAnotherEvent;
-	stAnotherEvent.eventId = ANOTHER_MESSAGE_ID;
-	stAnotherEvent.sampleData = 4567;
-	
-	event stThirdEvent;
-	stThirdEvent.eventId = THIRD_MESSAGE_ID;
-	stThirdEvent.sampleData = 789;	
+	event stSampleEvent = {SAMPLE_MESSAGE_ID, 1234};	
+	event stAnotherEvent = {ANOTHER_MESSAGE_ID, 4567};
+	event stThirdEvent = {THIRD_MESSAGE_ID, 9999};
 	
 	// now dispatch some events:
 	ed.dispatch(ec.getHandle(), &stSampleEvent); 			// dispatch event to ec and call the callback
