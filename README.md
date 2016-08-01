@@ -1,7 +1,7 @@
 # dec-concept
 dec: dispatch event using callbacks.
 
-A sample for notifying events to object hinstances using:
+A sample for notifying events to object instances using:
 - function pointer
 - lambda functions
 - classe methods
